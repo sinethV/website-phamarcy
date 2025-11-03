@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - PharmaCare</title>
+    <meta name="description" content="Stay updated with the latest health tips, medicine information, and wellness advice from PharmaCare experts.">
+    <meta name="keywords" content="health blog, medicine tips, wellness, healthcare advice, pharmacy blog">
+    <meta property="og:title" content="Blog - PharmaCare">
+    <meta property="og:description" content="Stay updated with the latest health tips and wellness advice from PharmaCare experts.">
+    <meta name="twitter:title" content="Blog - PharmaCare">
+    <meta name="twitter:description" content="Stay updated with the latest health tips and wellness advice from PharmaCare experts.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #10b981;
+            --secondary-color: #065f46;
+            --accent-color: #34d399;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-medium hover:bg-[var(--secondary-color)] transition-colors;
+        }
+        
+        .btn-secondary {
+            @apply bg-white text-[var(--primary-color)] border border-[var(--primary-color)] px-6 py-3 rounded-lg font-medium hover:bg-[var(--primary-color)] hover:text-white transition-colors;
+        }
+        
+        .card {
+            @apply bg-white rounded-lg shadow-sm border border-[var(--border-color)] p-6;
+        }
+        
+        .nav-link {
+            @apply text-[var(--text-secondary)] hover:text-[var(--primary-color)] font-medium transition-colors;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/BlogList.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="blog-app.js"></script>
+</body>
+</html>
